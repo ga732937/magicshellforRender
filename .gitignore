@@ -1,0 +1,51 @@
+# Python 虛擬環境
+venv/
+.env/
+ENV/
+
+# Python 編譯檔案
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE 相關
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# 專案輸出和暫存檔案
+output/
+*.log
+*.csv
+*.xlsx
+*.xls
+
+# 專案特定檔案
+config.py                    # 設定檔通常包含敏感資訊
+*.bat                       # Windows 批次檔
+runtime.txt                 # 運行時設定
+.cursorrules               # 特定規則檔案
+
+# 暫存檔案
+temp/
+*.tmp
+
+# 系統檔案
+Thumbs.db
+.DS_Store
+
+# 個人筆記和文檔
+程式講解.txt
+*.md
+!README.md                  # 但保留 README.md
+
+# 憑證和金鑰檔案
+*.pem
+*.key
+*.crt
+*.json
+
+# 其他
+*.log
+.env
