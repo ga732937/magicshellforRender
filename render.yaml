@@ -1,7 +1,9 @@
 services:
   - type: web
     name: web-scraper
-    env: python
+    env: docker
+    dockerfilePath: ./Dockerfile
+    runtime: python3
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn server:app
     envVars:

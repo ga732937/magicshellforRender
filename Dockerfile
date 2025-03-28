@@ -48,5 +48,5 @@ RUN mkdir -p data logs
 ENV PYTHONUNBUFFERED=1
 ENV MALLOC_ARENA_MAX=2
 
-# 啟動服務
-CMD ["gunicorn", "server:app", "--bind", "0.0.0.0:$PORT"]
+# 使用 shell 形式的 CMD 來確保環境變數被正確解析
+CMD gunicorn server:app --bind 0.0.0.0:$PORT
