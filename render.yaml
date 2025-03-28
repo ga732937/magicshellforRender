@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: web-scraper
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn server:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.4
+      - key: MALLOC_ARENA_MAX
+        value: 2
+      - key: API_KEY
+        sync: false
+      - key: SHEET_ID
+        sync: false
+      - key: WORKSHEET_NAME
+        sync: false
+      - key: LOGIN_USERNAME
+        sync: false
+      - key: LOGIN_PASSWORD
+        sync: false
